@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aishwarya G K | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="logo">AG</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero fade-in">
+  <div class="container hero-grid">
+    <div>
+      <h1 class="hero-name">Aishwarya G K</h1>
+      <h2 class="hero-title">Aspiring Software Developer</h2>
+      <p>Computer Science Engineering Student</p>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="Resume.pdf" target="_blank" class="btn secondary">View Resume</a>
+    </div>
+    <div class="profile">
+      <img src="profile.jpg" alt="Aishwarya G K Profile Photo">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section fade-in">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      BE Computer Science and Engineering student (2023–2027) passionate about building intelligent, real-world software solutions. I enjoy transforming ideas into practical applications using AI and modern development technologies. I am driven to continuously learn, innovate, and apply my skills to create efficient, impactful digital solutions.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="section alt fade-in">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">Java</div>
+      <div class="card">Python</div>
+      <div class="card">C</div>
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">Excel</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section fade-in">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card project">
+        <h3>Airline Reservation System</h3>
+        <p>Java and SQL based reservation management system.</p>
+      </div>
+
+      <div class="card project">
+        <h3>Leaf Disease Detection</h3>
+        <p>YOLOv11 powered system detecting coconut leaf diseases with AI suggestions.</p>
+      </div>
+
+      <div class="card project">
+        <h3>E-commerce Website</h3>
+        <p>Online shopping website with product browsing features.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates" class="section alt fade-in">
+  <div class="container">
+    <h2>Certificates</h2>
+    <div class="grid">
+      <div class="card">NASSCOM Acquiring Data (2024)</div>
+      <div class="card">Cisco Introduction to CyberSecurity(2024)</div>
+      <div class="card">Generative AI Professional (2024)</div>
+      <div class="card">NPTEL Programming in Java (2024)</div>
+      <div class="card">Oracle Cloud Infrastructure (2024 and 2025)</div>
+      <div class="card">NPTEL Machine Learning (2025)</div>
+      <div class="card">UiPath Automation Developer (2025)</div>
+      <div class="card">IBM Python for Data Science (2025)</div>
+      <div class="card">Cisco Python Essentials (2025)</div>
+      <div class="card">AWS Forage (2025)</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section fade-in">
+  <div class="container">
+    <h2>Contact</h2>
+        <p>Email: <a href="mailto:aishu25gk@gmail.com">aishu25gk@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919791185422">+91 9791185422</a></p>
+        <p>LinkedIn:
+        <a href="https://www.linkedin.com/in/aishwarya-gk-53060229a/" target="_blank">
+        linkedin.com/in/aishwarya-gk-53060229a
+        </a></p>
+
+        <p>GitHub:
+        <a href="https://github.com/aishu25gk" target="_blank">
+        github.com/aishu25gk
+        </a></p>
+        <p>Country: India,Chennai</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    © 2026 Aishwarya G K
+  </div>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2 };
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>
